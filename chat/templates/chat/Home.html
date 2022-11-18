@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "{% static  'Home.css' %}">
+
+    </head>
+    <body class="b" style="background-image :url({% static 'images/bg.jpg' %});">
+        {% csrf_token %}
+        
+<div class="wrapper">
+    <nav>
+        <div class="button">
+            <button class="button-27" role="button" style="align : right;"><a class="sign-out" href="{% url 'logout' %}" >SIGNOUT</a></button>
+        </div>
+    </nav>
+    <h1>SCOPE</h1>
+    <script>
+        window.setInterval('refresh()', 2000); 	
+        // Call a function every 10000 milliseconds 
+        // (OR 10 seconds).
+    
+        // Refresh or reload page.
+        function refresh() {
+            window .location.reload();
+        }
+    </script>
+    <div class="cols">
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="container">
+                      <div class="front" style="background-image: url({% static 'images/Academics-logos.jpeg' %})">
+                          <div class="inner">
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                            <a id="Academics" name="Academics" >Academics</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="container">
+                      <div class="front" style="background-image: url({% static 'images/PersonalInfo-logos.jpeg' %});">
+                          <div class="inner">
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                            <a id="Personal" name="Personal" href="{% url 'Details' %}" >Personal Info</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="container">
+                      <div class="front" style="background-image: url({% static 'images/Payments-logos.jpeg' %})">
+                          <div class="inner">
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                            <button>Payments</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="container">
+                    
+                      <div class="front" id = "queries_logo" style="background-image: url({% static 'images/Queries-logos_white.png' %})">
+                        {% if count != 0 %}
+                        <h3><span class="b">{{ count }}</span></h3>
+                      {% endif %}
+                        <div class="inner">
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                            <div>
+                                <a id="Queries" name="Queries" href="{% url 'Queries' %}" ><img  src="{% static "Images\livechat.png" %}" width="200" height="60"></img>
+                                </a>    
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+          </div>
+   </div>
+</body>
+   </html>
