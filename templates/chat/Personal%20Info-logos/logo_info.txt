@@ -1,7 +1,0 @@
-
-            Fonts used: SourceSansPro-Black,NexaRustSlab-Black 
-
-            Colors used: 1161E4,F5AFBB  
-
-            Icon url: https://thenounproject.com/term/avatar/842918  
-        
